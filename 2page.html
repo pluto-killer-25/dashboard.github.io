@@ -10,7 +10,13 @@ body {
   overflow: hidden;
   background-color: #333;
 }
-
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -28,7 +34,7 @@ body {
 .topnav a.active {
   background-color: rgb(57, 82, 195);
   color: white;
-
+}
 
     
 /* W3.CSS 2.99 Mar 2017 by Jan Egil and Borge Refsnes */
@@ -403,5 +409,21 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
                 <a href="#about">About</a>
               </div>
     <font face = "Comic sans MS" size =" 7" align = "center"><strong>Cute Dauchound Pictures!!!</strong></font><br />
+    <button onclick="myFunction()">Try it</button>
+    <div id="myDIV">
+            This is my DIV element.
+            </div>
+
+            <script>
+              function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+              </script>
+
 </body>
 </html>
