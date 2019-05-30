@@ -1,87 +1,6 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  
-body {
-	background-color: aqua
-} 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-}
-
-/* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the list items */
-ul li {
-  cursor: pointer;
-  position: relative;
-  padding: 12px 8px 12px 40px;
-  list-style-type: none;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-  
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-/* Darker background-color on hover */
-ul li:hover {
-  background: #ddd;
-}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -107,104 +26,11 @@ body {
 }
 
 .topnav a.active {
-  background-color: rgb(57, 82, 195);;
+  background-color: rgb(57, 82, 195);
   color: white;
-}
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #888;
-  color: #fff;
-  text-decoration: line-through;
-}
 
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
 
-/* Style the close button */
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-/* Style the header */
-.header {
-  background-color: #f44336;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
-
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-}
-
-#mySlider{
-    display: block;
-}
-
-@media (max-width: 640px) 
-{
-    #mySlider
-    {
-        display: none;
-    }
-}
-
-.addBtn:hover {
-  background-color: #bbb;
-}
-#content-desktop {
-    display: inline;
-    }
-
-    #content-mobile {
-    display: none;
-    } 
+    
 /* W3.CSS 2.99 Mar 2017 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
@@ -546,7 +372,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-border-cyan,.w3-hover-border-cyan:hover{border-color:#00bcd4!important}
 .w3-border-blue-grey,.w3-hover-border-blue-grey:hover,.w3-border-blue-gray,.w3-hover-border-blue-gray:hover{border-color:#607d8b!important}
 .w3-border-green,.w3-hover-border-green:hover{border-color:#4CAF50!important}
-.w3-border-light-green,.w3-hover-border-light-green:hover{border-color:#8bc34a!important}
+.w3-border-light-green,.w3-hover-border-light-green:hover{border-color:#adc98e!important}
 .w3-border-indigo,.w3-hover-border-indigo:hover{border-color:#3f51b5!important}
 .w3-border-khaki,.w3-hover-border-khaki:hover{border-color:#f0e68c!important}
 .w3-border-lime,.w3-hover-border-lime:hover{border-color:#cddc39!important}
@@ -566,176 +392,16 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+
 </style>
 </head>
-<body onload="isMobileDevice()">
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-  <title>Aidan's Dashboard</title>
-  <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="2page.html">Cute Dauchound Pic!!!z</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
-<div id="myDIV" class="header" width="50%">
-  <h2 style="margin:5px">My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
-
-<ul id="myUL">
-
-</ul>
-<div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/2147714"><span style="color:gray;">Current local time in</span><br />Sydney, Australia</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=large&timezone=Australia%2FSydney" width="100%" height="140" frameborder="0" seamless></iframe> </div>
-</div>
-
-<div align="center" class="#mySlider">
-<table style="height: 66px; width: 630px; background-color: #ffffff;">
-<tbody>
-<tr style="height: 114px;">
-<td style="width: 113px; height: 114px;">
-<p style="text-align: center;"><a href="https://www.staloysius.instructure.com"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i1.wp.com/www.calvary.edu/wp-content/uploads/2018/05/Canvas-Logo.png?fit=200%2C202&amp;ssl=1" alt="" width="76" height="77" />Canvas</a></p>
-</td>
-<td style="width: 103px; text-align: center; height: 114px;">
-<p><a href="https://www.staloysius.nsw.edu.au/"><img src="https://adfs.staloysius.nsw.edu.au/adfs/portal/logo/logo.png?id=F5417AEA58390BF291A6D6E209E72668D43D42D5B60DEE4A105C9268F8E14664" alt="" width="93" height="75" />St Aloysius'&nbsp;</a></p>
-</td>
-<td style="width: 124px; text-align: center; height: 114px;"><a href="https://www.youtube.com"><img src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c545.png" alt="" width="85" height="85" />YouTube</a></td>
-<td style="width: 112px; text-align: center; height: 114px;"><a href="https://www.clickview.com.au/" target="_blank" rel="noopener"><img src="https://students.faith.sa.edu.au/images/tiles/clickview-icon.png" alt="" width="96" height="96" />Click View</a></td>
-<td style="width: 113px; text-align: center; height: 114px;"><a href="https://tannocktapper1.neocities.org" target="_blank" rel="noopener"><img src="https://cdn.newsapi.com.au/image/v1/2c1450de7d0349f37b27c923f71892ab?width=650" alt="" width="110" height="83" />Tannic Tapper</a></td>
-</tr>
-</tbody> 
-</table>
-</div>
-<p><strong>Hello Aidan how is your day?</strong></p>
-<form>
-
-<button name="subject" type="submit" value="fav_Good" onClick="clickGood()">Good</button>
-<button name="subject" type="submit" value="fav_Bad" onClick="clickBad()" >Bad</button>
-</form>
-
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">I want to see dulcie</button>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Here's Dulice:
-		<br>
-		<div><img src="20190319_191914.jpg" alt="dulcie" width="50%"><div align="right"><iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Dulcie&dob=1558555867&gender=m&element=Earth&pet=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FhaSbeZlMKCTE4%2Fgiphy.gif&map=hills.jpg&background=gify.jpg&tablecolor=black&textcolor=black" frameborder="1"></iframe>/div></div>
-	</p>
-  </div>
-
-</div>
-
-<div>
-<div align ="left" style = "width:300px;height:150px" ><img src="sausage.png"></div>
-<div align="right"><</iframe></div></div>
-
-
+<body>
+        <div class="topnav">
+                <a href="index.html">Home</a>
+                <a class="active" href="2page.html">Cute Dauchound Pics</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+    <font face = "Comic sans MS" size =" 7" align = "center"><strong>Cute Dauchound Pictures!!!</strong></font><br />
 </body>
-
-
-
-
-
-
-
-
-
-<script>
-function clickGood(){
-alert("Nice to hear that, hope it stays the same way, BTW DULCIE LOVES YOU!!!")
-}
-function clickBad(){
-alert("Hope that your day gets better and remember dulcie loves you!!!")
-}
-function Dulcie(){
-
-}
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-
-</script>
 </html>
