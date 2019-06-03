@@ -3,10 +3,54 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  /* <- Demo Stuff Start */
 
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin:0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.btn {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+
+/* Demo Stuff End -> */
+
+/* <- Magic Stuff Start */
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+.green-background {
+  background-color: blue;
+}
 body {
-	background-color: aqua
-} 
+	background-image: url("https://media.giphy.com/media/9WC8WTZsFxkRi/giphy.gif")
+  } 
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -55,7 +99,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+/*made by the one called de Aidan
 /* Style the list items */
 ul li {
   cursor: pointer;
@@ -418,7 +462,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-padding-4{padding-top:4px!important;padding-bottom:4px!important}
 .w3-padding-8{padding-top:8px!important;padding-bottom:8px!important}
 .w3-padding-12{padding-top:12px!important;padding-bottom:12px!important}
-.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}
+w3.padding-16{padding-top:16px!important;padding-bottom:16px!important}
 .w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
 .w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
 .w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
@@ -574,7 +618,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
   <div class="topnav">
     <a class="active" href="#home">Home</a>
     <a href="2page.html">Cute Dauchound Pic!!!z</a>
-    <a href="#contact">Contact</a>
+    <a href="hackerClicker.html">HACKER CLICKER!!!</a>
     <a href="#about">About</a>
   </div>
 <div id="myDIV" class="header" width="50%">
@@ -586,7 +630,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 <ul id="myUL">
 
 </ul>
-<div style="text-align:center;padding:1em 0;"> <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/2147714"><span style="color:gray;">Current local time in</span><br />Sydney, Australia</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=large&timezone=Australia%2FSydney" width="100%" height="140" frameborder="0" seamless></iframe> </div>
+<div class="green-background" style="text-align:center;padding:1em 0;" > <h2><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/2147714"><span style="color:white;">Current local time in</span><br />Sydney, Australia</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=large&timezone=Australia%2FSydney" width="100%" height="140" frameborder="0" seamless></iframe> </div>
 </div>
 
 <div align="center" class="#mySlider">
@@ -614,7 +658,10 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 </form>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">I want to see dulcie</button>
+<br>
+<br>
+<br>
+<a class="btn btn-1" id="myBtn">I wnat to see dulcie</a>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
