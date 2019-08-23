@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>js clock</title>
+  </head>
+  <body>
+	<canvas></canvas>
+	<strong></strong>
+	<script>
+	
+	var quality = 0.65;
+
+var w = Math.floor(quality * innerWidth);
+var h = Math.floor(quality * innerHeight);
+
+var ctx, dots, updatingTime = false, j = 0;
+
+onload = function() {
+  var cvs = document.querySelector("canvas");
+  cvs.width = w; cvs.height = h;
+  ctx = cvs.getContext("2d");
+  
+  ctx.font = Math.min(w, h)/4.5 + "px serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  
+  init();
+  animate();
+  setInterval(updateTime, 1000);
+}
+
+function init() {
+  ctx.fillStyle = "lightcyan";
+  ctx.fillText("-JS Clock-", w/2, h/2);
+  
+  var img = ctx.getImageData(0, 0, w, h);
+  var data = img.data;
+  
+  dots = [];
+  for(var y = 0; y < h; y++)
+  for(var x = 0; x < w; x++) {
+	var i = 4*(y*w + x);
+	if(data[i+3] > 64)
+	  dots.push(new Dot(x, y, data[i],
+		data[i+1], data[i+2], data[i+3]));
+  }
+  
+  ctx.clearRect(0, 0, w, h);
+}
+
+function animate() {
+  if(!updatingTime) {
+	ctx.clearRect(0, 0, w, h);
+	
+	dots.forEach(function(dot) {
+	  dot.update(1/60);
+	  dot.style();
+	  ctx.fillRect(dot.x, dot.y, 1, 1);
+	});
+  }
+  
+  requestAnimationFrame(animate);
+}
+
+function updateTime() {
+  updatingTime = true;
+  var d = new Date();
+  var txt = d.getHours() + ":" + d.getMinutes()
+	+ ":" + d.getSeconds();
+  
+  txt = d.toTimeString().substr(0, 8);
+  
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = "white";
+  ctx.fillText(txt, w/2, h/2);
+  
+  var img = ctx.getImageData(0, 0, w, h);
+  var data = img.data;
+  
+  for(var y = 0; y < h; y++)
+  for(var x = 0; x < w; x++) {
+	var i = 4*(y*w + x);
+	if(data[i+3] > 16) {
+	  dots[j].setPos(x, y);
+	  j = (j + 2345691) % dots.length;
+	}
+  }
+  
+  ctx.clearRect(0, 0, w, h);
+  updatingTime = false;
+}
+
+function Dot(x, y, r, g, b, a) {
+  this.sx = x; this.sy = y;
+  this.x = x; this.y = y;
+  this.style = function() {
+	ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a})`;
+  }
+}
+
+Dot.prototype.update = function(dt) {
+  var vx = this.sx - this.x;
+  var vy = this.sy - this.y;
+  this.x += 20*vx*dt;
+  this.y += 0.5*Math.abs(vy)*vy*dt;
+}
+
+Dot.prototype.setPos = function(x, y) {
+  this.sx = x; this.sy = y;
+}
+	
+	
+	</script>
+  </body>
+</html>
